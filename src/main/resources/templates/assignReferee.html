@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân công thủ công trọng tài</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        select {
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* Màu nền */
+            border: none; /* Không có đường viền */
+            color: white; /* Màu chữ */
+            padding: 10px 20px; /* Độ lớn của nút */
+            text-align: center; /* Căn giữa nội dung */
+            text-decoration: none; /* Không có gạch chân dưới */
+            display: inline-block; /* Hiển thị như một khối */
+            font-size: 16px; /* Kích cỡ chữ */
+            margin: 4px 2px; /* Khoảng cách với các phần khác */
+            cursor: pointer; /* Con trỏ chuột thành bàn */
+            border-radius: 8px; /* Đường cong góc */
+        }
+
+    </style>
+</head>
+<body>
+<h2>Phân công thủ công trọng tài cho trận đấu</h2>
+<table>
+    <tr>
+        <th>Sân đấu</th>
+        <th>Đội nhà</th>
+        <th>Đội khách</th>
+    </tr>
+    <tr>
+        <td>San A</td>
+        <td>Đội X</td>
+        <td>Đội Y</td>
+    </tr>
+</table>
+<br>
+<form>
+    <label for="mainReferee">Trọng tài chính:</label>
+    <select id="mainReferee" name="mainReferee">
+        <option value="referee1">Trọng tài 1</option>
+        <option value="referee2">Trọng tài 2</option>
+        <option value="referee3">Trọng tài 3</option>
+        <!-- Thêm các tùy chọn khác nếu cần -->
+    </select>
+    <br><br>
+    <label for="linesman1">Trọng tài biên 1:</label>
+    <select id="linesman1" name="linesman1">
+        <option value="linesmanA">Nguyễn Văn A</option>
+        <option value="linesmanB">Nguyễn Văn B</option>
+        <option value="linesmanC">Nguyễn Văn C</option>
+        <!-- Thêm các tùy chọn khác nếu cần -->
+    </select>
+    <br><br>
+    <label for="linesman2">Trọng tài biên 2:</label>
+    <select id="linesman2" name="linesman2">
+        <option value="linesmanA">Nguyễn Văn A</option>
+        <option value="linesmanB">Nguyễn Văn B</option>
+        <option value="linesmanC">Nguyễn Văn C</option>
+        <!-- Thêm các tùy chọn khác nếu cần -->
+    </select>
+    <br><br>
+    <label for="linesman2">Trọng tài ngoài sân:</label>
+    <select id="linesman2" name="linesman2">
+        <option value="linesmanA">Nguyễn Văn A</option>
+        <option value="linesmanB">Nguyễn Văn B</option>
+        <option value="linesmanC">Nguyễn Văn C</option>
+        <!-- Thêm các tùy chọn khác nếu cần -->
+    </select>
+    <br><br>
+    <input type="submit" value="Lưu phân công">
+</form>
+</body>
+</html>

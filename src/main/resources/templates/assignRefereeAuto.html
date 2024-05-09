@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Thông tin trận đấu</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .sub-table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .sub-table th, .sub-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #assign-random {
+            background-color: #4CAF50; /* Màu nền */
+            border: none; /* Không có đường viền */
+            color: white; /* Màu chữ */
+            padding: 10px 20px; /* Độ lớn của nút */
+            text-align: center; /* Căn giữa nội dung */
+            text-decoration: none; /* Không có gạch chân dưới */
+            display: inline-block; /* Hiển thị như một khối */
+            font-size: 16px; /* Kích cỡ chữ */
+            margin: 4px 2px; /* Khoảng cách với các phần khác */
+            cursor: pointer; /* Con trỏ chuột thành bàn */
+            border-radius: 8px; /* Đường cong góc */
+        }
+
+    </style>
+</head>
+<body>
+<h2>Thông tin trận đấu</h2>
+<button id="assign-random">Phân công tự động</button>
+<table>
+    <thead >
+    <tr>
+        <th>Ngày</th>
+        <th>Sân đấu</th>
+        <th>Đội nhà</th>
+        <th>Đội khách</th>
+        <th>Trọng tài chính</th>
+        <th>Trọng tài phụ</th>
+        <th></th>
+    </tr>
+
+    </thead >
+    <tbody id="tlb_match">
+    <tr>
+        <th>Ngày 1</th>
+        <th id="stt">1</th>
+        <th id="stadium">San A</th>
+        <th id="homeTeam">Đội X</th>
+        <th id="awayTeam">Đội Y</th>
+        <th id="mainReferee">Trọng tài 1</th>
+        <td>
+            <table class="sub-table">
+                <tr>
+                    <td id="linesman1">Nguyễn Văn A</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td id="linesman2">Nguyễn Văn B</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td id="otherReferee">Nguyên Văn C</td>
+                    <td>Trọng tài ngoài sân</td>
+
+                </tr>
+            </table>
+        </td>
+        <td><button class="edit-button" onclick="editReferee('1')">Chỉnh sửa</button></td>
+
+    </tr>
+    <tr>
+        <th>Ngày 1</th>
+        <th>2</th>
+        <th>San B</th>
+        <th>Đội P</th>
+        <th>Đội Q</th>
+        <th>Trọng tài 2</th>
+        <td>
+            <table class="sub-table">
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn B</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td>Nguyên Văn C</td>
+                    <td>Trọng tài ngoài sân</td>
+
+                </tr>
+            </table>
+        </td>
+        <td><button class="edit-button" onclick="editReferee('1')">Chỉnh sửa</button></td>
+
+    </tr>
+    <tr>
+        <th>Ngày 1</th>
+        <td>3</td>
+        <td>San C</td>
+        <td>Đội M</td>
+        <td>Đội N</td>
+        <td>Trọng tài 3</td>
+        <td>
+            <table class="sub-table">
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn B</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td>Nguyên Văn C</td>
+                    <td>Trọng tài ngoài sân</td>
+
+                </tr>
+            </table>
+        </td>
+        <td><button class="edit-button" onclick="editReferee('1')">Chỉnh sửa</button></td>
+
+        <!-- Cột trống vì đã đặt bên trên -->
+    </tr>
+    <tr>
+        <th>Ngày 1</th>
+        <td>4</td>
+        <td>San D</td>
+        <td>Đội A</td>
+        <td>Đội B</td>
+        <td>Trọng tài 4</td>
+        <td>
+            <table class="sub-table">
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn B</td>
+                    <td>Trọng tài biên</td>
+
+                </tr>
+                <tr>
+                    <td>Nguyên Văn C</td>
+                    <td>Trọng tài ngoài sân</td>
+
+                </tr>
+            </table>
+        </td>
+        <td><button class="edit-button" onclick="editReferee('1')">Chỉnh sửa</button></td>
+
+        <!-- Cột trống vì đã đặt bên trên -->
+    </tr>
+    <tr>
+        <th>Ngày 1</th>
+        <td>5</td>
+        <td>San E</td>
+        <td>Đội X</td>
+        <td>Đội Y</td>
+        <td>Trọng tài 5</td>
+        <td>
+            <table class="sub-table">
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>Trọng tài biên</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn B</td>
+                    <td>Trọng tài biên</td>
+                </tr>
+                <tr>
+                    <td>Nguyên Văn C</td>
+                    <td>Trọng tài ngoài sân</td>
+                </tr>
+            </table>
+        </td>
+        <td><button class="edit-button" onclick="editReferee('1')">Chỉnh sửa</button></td>
+
+    </tr>
+
+
+    </tbody>
+</table>
+</body>
+<!--<script src="/viewAssignReferee.js"></script>-->
+<script src="/request.js"></script>
+<script src="/assignRefereeAuto.js"></script>
+<script src="/model.js"></script>
+
+</html>

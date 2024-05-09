@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý web</title>
+    <style>
+        /* style.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #e0e0e0;
+            padding: 10px 0;
+
+        }
+
+        nav ul {
+            margin-left: 40px;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            text-align: left;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .button-container button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #3e8e41; /* Darker green */
+        }
+
+        #assign {
+            background-color: #f44336; /* Red */
+        }
+
+        #assign:hover {
+            background-color: #da2026; /* Darker red */
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Trang quản trị</h1>
+</header>
+<nav>
+    <ul>
+        <li><a id="referee">Quản lý trọng tài</a></li>
+        <li><a href="#">Quản lý đội bóng tham gia</a></li>
+        <li><a href="#">Quản lý nhà tài trợ</a></li>
+        <li><a href="#">Thống kê</a></li>
+        <li><a href="#">BXH</a></li>
+    </ul>
+</nav>
+<main>
+    <section id="user-management">
+        <h2>Thống kê</h2>
+        <div class="button-container">
+            <button id="statistic">Thống kê theo lượng khán giả đến sân</button>
+            <button>Thống kê tiền tài trợ mùa giả</button>
+        </div>
+    </section>
+</main>
+
+</body>
+<script>
+    var assignButton = document.getElementById("statistic");
+
+    assignButton.addEventListener("click", function() {
+        window.location.href = "/statisticBySpectator";
+    });
+
+    var refereeBtn = document.getElementById("referee")
+    refereeBtn.addEventListener("click",function (){
+        window.location.href = "/"
+    })
+</script>
+</html>
